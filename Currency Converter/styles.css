@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 20%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+section.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--grey);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  color: var(--dark-grey);
+}
+
+.box {
+  /* border: 1px solid red; */
+  width: 35rem;
+  border-top: 5px solid #449acf;
+  padding: 4rem 2rem;
+  background-color: var(--white);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 5px 5px;
+}
+
+.base-convert {
+  background: rgba(68, 154, 207, 0.2);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+}
+
+.base-convert p {
+  font-weight: 700;
+}
+
+.base {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: red;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--grey);
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.text:nth-child(2) {
+  padding-right: 7.7rem;
+}
+
+.main-convert {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cur-box {
+  width: 30%;
+}
+
+.switch-cur {
+  width: 30%;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-sec);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.currency {
+  border: 2px solid var(--grey);
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 3px;
+  width: 9rem;
+  display: flex;
+  align-items: center;
+}
+
+.currency img {
+  width: 30%;
+  margin-right: 3px;
+}
+.currency select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cur-box input {
+  width: 9rem;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  outline: none;
+  border: 2px solid var(--grey);
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}

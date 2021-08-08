@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+/* HEADER */
+/* HEADER */
+header {
+  width: 100%;
+  /* background-color: var(--dark-grey); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 0;
+  z-index: 111;
+  transition: all 0.5s;
+}
+
+header.sticky {
+  background-color: var(--grey);
+  /* border-bottom: 1px solid #777; */
+  padding: 1rem 0;
+}
+
+nav {
+  /* height: 7.5rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 4.5rem;
+  color: var(--color-sec);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list li {
+  list-style: none;
+  margin: 0 1.5rem;
+}
+
+.nav-list li a {
+  color: var(--white);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+header.sticky li a {
+  color: var(--dark-grey);
+}
+
+/* New Section CSS */
+section.header {
+  width: 100%;
+  height: 90vh;
+  background: url(./images/bg-girl.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* Section */
+section {
+  padding: 5rem 0;
+}
+
+.box {
+  border: 1px solid var(--grey);
+  padding: 2rem;
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: 3rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex > * {
+  margin: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Scroll Indicator CSS */
+.scroll-indicator {
+  width: 100%;
+  height: 3px;
+  background: var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  visibility: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 3px;
+  background-color: var(--color-sec);
+}
+
+/* Newsletter Section */
+.newsletter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: var(--white);
+  border: 2px dashed var(--color-primary);
+  padding: 2rem 3rem;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.fa-times {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.4rem;
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="main">
+      <h1>Simple Currency Converter</h1>
+      <div class="container box">
+        <div class="converter">
+          <!-- Base Conversion -->
+          <div class="base-convert">
+            <p>Exchange Rate</p>
+            <span class="base">1 USD = 300 GBP</span>
+          </div>
+          <!-- Text From & To -->
+          <div class="text">
+            <p>From</p>
+            <p>To</p>
+          </div>
+          <!-- Main Conversion -->
+          <div class="main-convert">
+            <!-- From -->
+            <div class="cur-box">
+              <div class="currency from">
+                <img
+                  src="https://www.worldometers.info/img/flags/us-flag.gif"
+                  alt=""
+                />
+                <select class="cur-1">
+                  <option value="AED">AED</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="USD" selected>USD</option>
+                </select>
+              </div>
+              <input type="text" class="cur-1-input" placeholder="0" />
+            </div>
+
+            <!-- Switch Button -->
+            <div class="switch-cur">
+              <div class="fas fa-exchange-alt"></div>
+            </div>
+
+            <!-- TO -->
+            <div class="cur-box">
+              <div class="currency to">
+                <img
+                  src="https://www.worldometers.info/img/flags/uk-flag.gif"
+                  alt=""
+                />
+                <select class="cur-2">
+                  <option value="AED">AED</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP" selected>GBP</option>
+                  <option value="USD">USD</option>
+                </select>
+              </div>
+              <input type="text" class="cur-2-input" placeholder="0.00" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

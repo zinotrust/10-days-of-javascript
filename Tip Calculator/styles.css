@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* SECTION */
+/* SECTION */
+/* SECTION */
+section {
+  height: 100vh;
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  width: 40rem;
+  background-color: var(--white);
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--white);
+  background-color: var(--color-sec);
+  text-align: center;
+  padding: 1rem;
+}
+
+form,
+form > * {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+select {
+  font-size: 1.6rem;
+  padding: 7px;
+  width: 20rem;
+  text-align: right;
+}
+
+.btn {
+  margin: 5px 0;
+  background-color: var(--color-primary);
+  color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-sec);
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+.result {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.result > * {
+  background-color: var(--grey);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.total {
+  color: red;
+}

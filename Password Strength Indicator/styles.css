@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+.main {
+  height: 100vh;
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 40rem;
+}
+
+form {
+  padding: 2rem;
+}
+
+form h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.form-control input {
+  display: block;
+  border: 2px solid var(--grey);
+  border-radius: 3px;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+.form-control input:focus {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-control.success input {
+  border-color: green;
+}
+.form-control.error input {
+  border-color: red;
+}
+
+.form-control small {
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+form button {
+  width: 100%;
+  background-color: var(--color-sec);
+  border: none;
+  outline: none;
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Password Strength CSS */
+.show-pass {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+
+.fa-eye {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.progress {
+  width: 100%;
+  height: 3px;
+  margin: 2rem 0;
+  background-color: var(--grey);
+}
+
+.progress-bar {
+  width: 5%;
+  height: 3px;
+  background-color: #777;
+  transition: all 0.3s ease;
+}
+
+.form-list {
+  list-style-type: none;
+}
+
+.pb-danger {
+  background-color: red;
+}
+.pb-warning {
+  background-color: yellow;
+}
+.pb-primary {
+  background-color: var(--light-blue);
+}
+.pb-success {
+  background-color: green;
+}
+
+.fa-circle {
+  font-size: 6px;
+}
+.fa-check {
+  color: #02b502;
+}

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    background: url(./images/bg.png) no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 55px;
+    color: #fff;
+    line-height: 2;
+}
+
+#countdown {
+    background-color: rgba(0,0,0,.4);
+    padding: 20px;
+    font-size: 45px;
+    color: #fff;
+    border-radius: 5px;
+
+}

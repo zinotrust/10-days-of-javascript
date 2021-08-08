@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  /* width: 30%; */
+}
+
+.container {
+  /* max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px; */
+}
+
+/* Start Here */
+section.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--grey);
+  /* border: 2px solid red; */
+}
+
+.box {
+  width: 65rem;
+  height: auto;
+  /* border: 2px solid red; */
+}
+
+.main-container {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+  width: 50%;
+  height: 100%;
+  padding: 4rem 1rem;
+  background-color: var(--light-blue);
+  animation: slide-down 0.5s ease;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+form a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+form span {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.login {
+  /* display: none; */
+}
+
+.register {
+  display: none;
+}
+
+.forgot {
+  display: none;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-times {
+  color: red;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .img-container {
+    display: none;
+  }
+  .form-container {
+    width: 100%;
+  }
+}

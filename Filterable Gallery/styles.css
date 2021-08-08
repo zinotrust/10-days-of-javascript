@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+body {
+  background: var(--color-dark-grey);
+}
+
+.header {
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--white);
+  border-bottom: 1px solid var(--color-grey);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+h1 span {
+  color: var(--color-sec);
+}
+
+.gallery-filter {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s;
+}
+
+.gallery-filter .active {
+  color: var(--color-sec);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-sec);
+}
+
+.gallery-filter > * {
+  margin: 0 3px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.gallery .image {
+  border: 1px solid var(--color-grey);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+  animation: grow 0.5s ease-in-out;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gallery .image:hover::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00e";
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-sec);
+}

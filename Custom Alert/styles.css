@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 8px 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 1rem 0;
+  background: orangered;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn-warning {
+  background: #e69100;
+}
+
+.alert {
+  background: #f8d7da;
+  padding: 2rem 4rem;
+  min-width: 40rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 5px;
+  border-left: 8px solid transparent;
+  border-color: #d1281f;
+  transform: translateX(110%);
+}
+
+.alert.show {
+  animation: slide-in 1s ease forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-1rem);
+  }
+}
+
+.alert.hide {
+  animation: slide-out 1s ease forwards;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(-1rem);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+.fa-exclamation-circle {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #721c24;
+  font-size: 3rem;
+}
+
+.msg {
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  color: #721c24;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: transparent;
+  padding: 2rem 1.8rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #f3a1a7;
+}
+
+.close-btn .fas {
+  color: #721c24;
+  font-size: 2rem;
+}

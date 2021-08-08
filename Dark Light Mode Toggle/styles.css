@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/* :root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 50%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+:root {
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #db6400;
+
+  --background: var(--color-light);
+  --foreground: var(--color-dark);
+}
+
+.darkmode {
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #db6400;
+
+  --background: var(--color-dark);
+  --foreground: var(--color-light);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+section.main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text > * {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.buttons {
+  margin: 2rem 0;
+}
+
+.btn {
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.btn:first-child {
+  margin-right: 1rem;
+}
+
+.btn-primary {
+  background: var(--foreground);
+  color: var(--background);
+}
+.btn-orange {
+  background: var(--color-orange);
+  color: var(--color-light);
+}
+
+.intro-img {
+  text-align: center;
+}
+
+.intro-img img {
+  width: 50%;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background: var(--foreground);
+  color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-darkmode {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  border: 1px solid var(--foreground);
+  border-radius: 3px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 3px;
+}

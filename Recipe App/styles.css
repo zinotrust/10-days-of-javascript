@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+body {
+  background: var(--color-dark-grey);
+}
+
+header {
+  width: 100%;
+  height: 25vh;
+  background: url(./images/bg.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.meal-search {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1rem 5rem;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+}
+
+.meal-search h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.meal-search h2 span {
+  color: var(--color-primary);
+}
+
+.search-box {
+  position: relative;
+}
+
+input {
+  padding: 1rem;
+  width: 80%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--color-primary);
+  border-radius: 1rem 0 1rem 0;
+  color: var(--color-dark-grey);
+}
+.search-box .btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-dark-grey);
+  transform: translateX(-2.5rem);
+  cursor: pointer;
+}
+
+.meal-result {
+  margin: 2rem 0;
+}
+
+.meals {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.meal {
+  width: 20rem;
+  background: var(--white);
+  padding: 5px 5px 1.5rem 5px;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0 1rem 1rem 0;
+}
+
+.meal h3 {
+  font-size: 1.6rem;
+  color: var(--color-dark-grey);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.meal a {
+  background: var(--color-sec);
+  padding: 5px;
+  font-size: 1.4rem;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary);
+  border-radius: 3px 3px 0 0;
+  transition: all 0.3s;
+}
+
+.meal a:hover {
+  background: var(--color-primary);
+}
+
+/* Modal section */
+.meal-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  border-radius: 3px;
+  width: 90%;
+  max-width: 50rem;
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.meal-details::-webkit-scrollbar {
+  height: 5px;
+  width: 4px;
+  border: 1px solid #d5d5d5;
+  background: #d5d5d5;
+}
+
+.meal-details::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  outline: 1px solid #eee;
+}
+
+.meal-details button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: red;
+  background: var(--white);
+  cursor: pointer;
+}
+.recipe-content > * {
+  padding: 5px;
+}
+
+.recipe-title {
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--color-grey);
+}
+
+.recipe-instruction h3 {
+  font-size: 1.6rem;
+}
+
+.recipe-link {
+  text-align: center;
+  background: red;
+  width: 8rem;
+  margin: 1rem auto;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.recipe-link a {
+  text-decoration: none;
+  color: var(--white);
+}
+@media screen and (max-width: 600px) {
+  .meal-search {
+    width: 90%;
+  }
+}

@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 50%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+section.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  border-bottom: 2px solid #8392ff;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text > * {
+  margin-bottom: 1rem;
+}
+
+.intro-text p:nth-child(1) {
+  font-weight: 600;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-dark-grey);
+}
+
+.intro-text h1 span.typed-word {
+  font-weight: 400;
+  color: var(--color-sec);
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background: #ccc;
+  }
+  49% {
+    background: #ccc;
+  }
+  50% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: #ccc;
+  }
+}
+
+span {
+  margin: 1rem 0;
+}
+
+.btn {
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 8px 1rem;
+  background-color: var(--color-sec);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+}
+
+.intro-img {
+  text-align: center;
+}
+
+.intro-img img {
+  width: 70%;
+}
+
+/* Preloader CSS */
+.preloader {
+  height: 100%;
+  width: 100%;
+  background: var(--color-grey);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  border: 3px solid var(--white);
+  border-top: 3px solid var(--color-sec);
+  border-right: 3px solid var(--color-sec);
+  border-bottom: 3px solid var(--color-sec);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: rotate 1s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.youtube {
+  display: flex;
+  justify-content: center;
+}

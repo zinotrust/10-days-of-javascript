@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  /* width: 30%; */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+section.main {
+  background: url(./images/bg-girl.jpg) no-repeat;
+  background-color: #000;
+  background-size: contain;
+  height: 80rem;
+}
+
+header {
+  width: 100%;
+  background-color: var(--grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem;
+}
+header h1 {
+  color: orangered;
+}
+
+.avatar img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.avatar-profile {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 7rem;
+  right: 1rem;
+  background-color: var(--white);
+  width: 25rem;
+  padding: 1rem 0;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all 0.3s;
+}
+
+.menu.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--white);
+  transform: rotate(45deg);
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+}
+
+.menu-header:hover {
+  background-color: rgba(182, 223, 240, 0.3);
+}
+
+.avatar-header {
+  margin-right: 1rem;
+}
+
+.menu-body ul {
+  width: 100%;
+  list-style: none;
+}
+
+.menu-body ul li a {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--dark-grey);
+  transition: all 0.1s;
+}
+
+.menu-body ul li a:hover {
+  background-color: rgba(182, 223, 240, 0.3);
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.log-out {
+  border: 1px solid var(--grey);
+}
+
+.menu-footer {
+  padding: 1rem 2rem;
+  background-color: rgba(182, 223, 240, 0.3);
+  cursor: pointer;
+}

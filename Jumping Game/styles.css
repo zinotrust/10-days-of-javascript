@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Start here */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.container {
+  background: url(images/forest1.gif) center no-repeat;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.4);
+}
+.game {
+  width: 500px;
+  height: 200px;
+  border-bottom: 3px solid var(--white);
+  margin: auto;
+}
+
+.hero {
+  width: 20px;
+  height: 50px;
+  position: relative;
+  top: 150px;
+  left: 20px;
+  z-index: 1;
+}
+
+.hero-boy {
+  width: 50px;
+  height: 50px;
+}
+
+.vilan {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 115px;
+  left: 450px;
+  z-index: 1;
+  /* animation: move 1s infinite linear; */
+}
+
+.vilan-wolf {
+  width: 50px;
+}
+
+/* Animation */
+.animate {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 100px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 60px;
+    transform: rotate(90deg);
+  }
+  75% {
+    top: 100px;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 150px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 480px;
+  }
+  100% {
+    left: -20px;
+  }
+}

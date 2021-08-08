@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+body {
+  background: var(--color-grey);
+}
+
+.main {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.title {
+  margin-bottom: 4rem;
+  display: block;
+}
+
+.title h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check > * {
+  margin: 0 3px;
+}
+
+/* Custom Check */
+.switch {
+  display: inline-block;
+  height: 3rem;
+  position: relative;
+  width: 6rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 2px;
+  width: 26px;
+  height: 26px;
+  background: var(--white);
+  transition: all 0.4s;
+}
+
+input:checked + .slider {
+  background: #4edf55;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round::before {
+  border-radius: 50%;
+}
+
+/* Price section */
+.price {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+}
+
+.price-box {
+  width: 40rem;
+  text-align: center;
+  background-color: var(--white);
+  padding-bottom: 3rem;
+  margin: 2rem 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.price-box p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  /* color: var(--white); */
+}
+
+.price-box h4 span {
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.price-box h4 span:nth-child(2) {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.price-box ul {
+  list-style: none;
+  margin-bottom: 3rem;
+}
+
+.price-box ul li {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--color-grey);
+}
+
+.price-box ul li:last-child {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.price-box a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: var(--color-sec);
+  padding: 1.2rem 3rem;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.price-box a:hover {
+  font-size: 1.5rem;
+}
+
+.box {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.box1,
+.btn1 {
+  background: linear-gradient(
+    to right bottom,
+    rgba(95, 201, 52, 1),
+    rgba(39, 120, 7, 1)
+  );
+}
+.box2,
+.btn2 {
+  background: linear-gradient(
+    to right bottom,
+    rgba(238, 142, 33, 1),
+    rgba(104, 50, 5, 1)
+  );
+}
+.box3,
+.btn3 {
+  background: linear-gradient(
+    to right bottom,
+    rgba(234, 67, 187, 1),
+    rgba(80, 3, 71, 1)
+  );
+}
+
+.price-box:nth-child(2) {
+  transform: scale(1.15);
+}
+
+@media screen and (max-width: 800px) {
+  .price {
+    flex-direction: column;
+  }
+  .price-box {
+    width: 35rem;
+  }
+  .price-box:nth-child(2) {
+    transform: scale(1);
+  }
+}

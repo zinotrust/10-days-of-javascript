@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="text-center display-3 fw-bolder py-3">Word Count Tool</h1>
+          <textarea
+            cols="30"
+            rows="10"
+            class="form-control fs-3 input"
+          ></textarea>
+        </div>
+      </div>
+      <!-- New Row -->
+      <div class="row d-flex justify-content-center my-3 g-3">
+        <div class="row col-md-4 border border-primary py-3">
+          <h3>Character: <span class="character">0</span></h3>
+        </div>
+        <div class="row col-md-4 border border-primary py-3">
+          <h3>Words: <span class="word">0</span></h3>
+        </div>
+      </div>
+      <!-- New Row -->
+      <div class="row d-flex justify-content-center my-3 g-3">
+        <div class="row col-md-4 border border-primary py-3">
+          <h3>Words Left: <span class="word-limit">0</span></h3>
+        </div>
+        <div class="row col-md-4 border border-primary py-3">
+          <h3>Reading Time: <span class="reading-time">0</span></h3>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

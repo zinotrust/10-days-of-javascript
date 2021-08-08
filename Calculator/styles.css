@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--blue);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start */
+.box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  width: 30rem;
+  height: 35rem;
+  margin: 0 auto;
+  background-color: var(--grey);
+  padding: 1.5rem;
+  border-radius: 3px;
+  position: relative;
+}
+
+.result {
+  color: var(--dark-grey);
+  background-color: var(--white);
+  height: 4.5rem;
+  width: 70%;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  border: 2px solid var(--color-sec);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.clear {
+  width: 20%;
+  height: 4.5rem;
+  background-color: red;
+  padding: 1rem;
+  position: absolute;
+  right: 2rem;
+  top: 1.6rem;
+  border-radius: 3px;
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  font-size: 1.6rem;
+}
+
+.keys li {
+  list-style: none;
+  width: 5rem;
+  background-color: var(--white);
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-primary);
+  border-radius: 3px;
+  color: var(--dark-grey);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.keys li:hover {
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.keys .equals {
+  background-color: orangered;
+  color: var(--white);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row box">
+        <div class="col-md-6">
+          <div class="form-container">
+            <div class="text-center">
+              <h2>Multi-Step Form</h2>
+              <span>Fill the form fields below</span>
+            </div>
+
+            <form action="" onsubmit="return false" autocomplete="off">
+              <div class="steps">
+                <p class="step">1</p>
+                <p class="step">2</p>
+                <p class="step">3</p>
+                <p class="step">4</p>
+              </div>
+
+              <div class="form-item">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="John" />
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Doe" />
+              </div>
+
+              <div class="form-item">
+                <label class="form-label">Age</label>
+                <input type="number" class="form-control" placeholder="" />
+                <label class="form-label">Gender</label>
+                <input type="text" class="form-control" placeholder="" />
+              </div>
+
+              <div class="form-item">
+                <label class="form-label">Education</label>
+                <input type="text" class="form-control" placeholder="" />
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control" placeholder="" />
+              </div>
+
+              <div class="form-item">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="john@example.com"
+                />
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="" />
+              </div>
+
+              <button class="btn btn-primary btn-lg">Previous</button>
+
+              <button class="btn btn-primary btn-lg">Next</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

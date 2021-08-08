@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 45rem;
+  text-align: center;
+  padding: 0;
+}
+
+.time {
+  width: 100%;
+  font-size: 4rem;
+  background-color: var(--color-primary);
+  padding: 4rem 5px;
+  border-radius: 3px;
+  font-family: "Roboto mono", monospace;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+button {
+  padding: 5px 1rem;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 3px;
+}
+.start {
+  background-color: green;
+}
+.pause {
+  background-color: var(--color-sec);
+}
+.reset {
+  background-color: red;
+}
