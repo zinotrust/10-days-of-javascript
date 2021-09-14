@@ -1,11 +1,18 @@
 // VARIABLES
 const modal = document.querySelector(".modal"),
-  btn = document.querySelector(".btn"),
-  close = document.querySelector(".close");
+  btn = document.querySelector(".btn");
+// close = document.querySelector(".close");
 
 btn.addEventListener("click", openModal);
-close.addEventListener("click", closeModal);
-modal.addEventListener("click", closeModal);
+// close.addEventListener("click", closeModal);
+// modal.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+  const evt = e.target.classList;
+  if (evt.contains("modal") || evt.contains("close")) {
+    closeModal();
+  }
+});
 
 // OPEN MODAL
 function openModal(e) {
